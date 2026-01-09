@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SysAiLabs — AI Products & Services</title>
+  <meta name="description" content="SysAiLabs — AI consulting, ML engineering, MLOps and productization." />
+  <link rel="stylesheet" href="assets/styles.css" />
+  <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#">SysAiLabs</a>
+      <nav class="nav" aria-label="Main navigation">
+        <a href="#services">Services</a>
+        <a href="#partners">Partners</a>
+        <a href="#about">About</a>
+        <a href="#contact" class="cta">Contact</a>
+      </nav>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="main-nav">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="hero-grid">
+          <div>
+            <h1>Building practical AI products that scale</h1>
+            <p class="lead">We help organizations move from research to production: AI strategy, custom models, data engineering, and MLOps.</p>
+            <p class="hero-cta">
+              <a href="#contact" class="btn btn-primary">Get a free consult</a>
+              <a href="#services" class="btn btn-outline">See services</a>
+            </p>
+          </div>
+          <div class="hero-visual" aria-hidden="true">
+            <!-- simple illustration placeholder -->
+            <svg width="320" height="200" viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg">
+              <rect x="0" y="0" width="320" height="200" rx="12" fill="#0f172a"/>
+              <g fill="#38bdf8" opacity="0.9">
+                <circle cx="80" cy="110" r="28"/>
+                <rect x="140" y="60" width="120" height="80" rx="8"/>
+                <circle cx="240" cy="120" r="18"/>
+              </g>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="container section">
+      <h2>Our services</h2>
+      <p class="section-intro">End-to-end AI & ML services tailored for product-driven teams.</p>
+
+      <div class="grid services-grid">
+        <article class="card">
+          <h3>AI Strategy & Roadmap</h3>
+          <p>Align AI initiatives to business value, identify quick wins and long-term product goals.</p>
+        </article>
+
+        <article class="card">
+          <h3>Custom Model Development</h3>
+          <p>Design and build models for NLP, CV, recommendation systems and time-series forecasting.</p>
+        </article>
+
+        <article class="card">
+          <h3>Data Engineering</h3>
+          <p>Ingest, clean, and maintain production-grade datasets with pipelines for scale and reliability.</p>
+        </article>
+
+        <article class="card">
+          <h3>MLOps & CI/CD</h3>
+          <p>Automate training, testing, deployment, monitoring and governance for models in production.</p>
+        </article>
+
+        <article class="card">
+          <h3>Model Audit & Explainability</h3>
+          <p>Bias detection, explainability reports and compliance-ready documentation for regulated environments.</p>
+        </article>
+
+        <article class="card">
+          <h3>Cloud Integration & Infra</h3>
+          <p>Cloud-native architecture, cost optimization and scaling strategies across major providers.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="partners" class="container section partners">
+      <h2>Trusted by</h2>
+      <p class="section-intro">We partner with startups and enterprises across industries. Replace these with your actual clients or partners.</p>
+
+      <ul class="partner-list" role="list">
+        <li class="partner">
+          <div class="logo">SA</div>
+          <div class="partner-info">
+            <div class="partner-name">Solace Analytics</div>
+            <div class="partner-desc">Supply chain optimization partner</div>
+          </div>
+        </li>
+
+        <li class="partner">
+          <div class="logo">ND</div>
+          <div class="partner-info">
+            <div class="partner-name">NovaDrive</div>
+            <div class="partner-desc">Autonomous vehicle perception startup</div>
+          </div>
+        </li>
+
+        <li class="partner">
+          <div class="logo">H2</div>
+          <div class="partner-info">
+            <div class="partner-name">Horizon Health</div>
+            <div class="partner-desc">Healthcare analytics and triage systems</div>
+          </div>
+        </li>
+
+        <li class="partner">
+          <div class="logo">FL</div>
+          <div class="partner-info">
+            <div class="partner-name">FinLink</div>
+            <div class="partner-desc">Fraud detection & risk modeling</div>
+          </div>
+        </li>
+      </ul>
+
+      <p class="small-note">To customize: edit the list items inside the <code>#partners .partner-list</code> block in index.html.</p>
+    </section>
+
+    <section id="about" class="container section about">
+      <h2>About SysAiLabs</h2>
+      <p>SysAiLabs is a product-first AI engineering firm. We combine engineering, design, and ML research to deliver reliable, maintainable, and high-impact AI systems.</p>
+      <ul>
+        <li>Founded: 2024</li>
+        <li>Headquarters: (replace with city)</li>
+        <li>Core values: Responsible AI, reproducibility, measurable business impact</li>
+      </ul>
+    </section>
+
+    <section id="contact" class="container section contact">
+      <h2>Contact</h2>
+      <p>Ready to start a project? Tell us about your goals and timeline.</p>
+
+      <form class="contact-form" action="#" method="post" onsubmit="alert('Form submit simulated — hook this up to your backend or Netlify Forms.') ; return false;">
+        <div class="form-row">
+          <label for="name">Name</label>
+          <input id="name" name="name" required />
+        </div>
+        <div class="form-row">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required />
+        </div>
+        <div class="form-row">
+          <label for="company">Company</label>
+          <input id="company" name="company" />
+        </div>
+        <div class="form-row">
+          <label for="message">Brief message</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
+        </div>
+
+        <div class="form-actions">
+          <button class="btn btn-primary" type="submit">Send message</button>
+          <a class="btn btn-outline" href="mailto:hello@sysailabs.example">Email us</a>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>© <span id="year"></span> SysAiLabs — All rights reserved.</div>
+      <div><a href="#privacy">Privacy</a> · <a href="#terms">Terms</a></div>
+    </div>
+  </footer>
+
+  <script>
+    // small scripts: nav toggle and dynamic year
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const navToggle = document.querySelector('.nav-toggle');
+    const nav = document.querySelector('.nav');
+    navToggle.addEventListener('click', () => {
+      const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+      navToggle.setAttribute('aria-expanded', !expanded);
+      nav.classList.toggle('nav-open');
+    });
+  </script>
+</body>
+</html>
