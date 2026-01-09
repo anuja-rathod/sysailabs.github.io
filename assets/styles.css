@@ -1,0 +1,176 @@
+/* Basic design for SysAiLabs - customize colors and fonts as needed */
+
+:root{
+  --bg:#0f172a;
+  --card:#0b1220;
+  --muted:#94a3b8;
+  --accent:#06b6d4;
+  --surface:#0b1220;
+  --text:#e6eef8;
+  --glass: rgba(255,255,255,0.03);
+  --radius:10px;
+  --max-width:1100px;
+  --container-padding:1.25rem;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  background: linear-gradient(180deg,#021026 0%, #031027 100%);
+  color:var(--text);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.5;
+}
+
+/* container */
+.container{
+  max-width:var(--max-width);
+  margin:0 auto;
+  padding:0 var(--container-padding);
+}
+
+/* header */
+.site-header{
+  position:sticky;
+  top:0;
+  z-index:40;
+  background:linear-gradient(180deg, rgba(2,6,23,0.6), rgba(2,6,23,0.35));
+  border-bottom:1px solid rgba(255,255,255,0.03);
+}
+.header-inner{
+  display:flex;
+  gap:1rem;
+  align-items:center;
+  justify-content:space-between;
+  padding:0.75rem 0;
+}
+.brand{
+  color:var(--text);
+  font-weight:700;
+  font-size:1.125rem;
+  text-decoration:none;
+}
+.nav{
+  display:flex;
+  gap:1rem;
+  align-items:center;
+}
+.nav a{
+  color:var(--muted);
+  text-decoration:none;
+  padding:0.35rem 0.5rem;
+}
+.nav a:hover{color:var(--text)}
+.nav .cta{
+  padding:0.4rem 0.75rem;
+  border-radius:8px;
+  background:linear-gradient(90deg,var(--accent),#0ea5b5);
+  color:#041024;
+  font-weight:600;
+}
+
+/* nav toggle for small screens */
+.nav-toggle{
+  display:none;
+  background:transparent;
+  border:0;
+  color:var(--text);
+  font-size:1.25rem;
+}
+
+/* hero */
+.hero{
+  padding:3.25rem 0;
+}
+.hero-grid{
+  display:grid;
+  grid-template-columns:1fr 360px;
+  gap:2rem;
+  align-items:center;
+}
+.lead{color:var(--muted); font-size:1.05rem}
+.hero-cta .btn{margin-right:0.5rem}
+
+/* cards & sections */
+.section{padding:2.25rem 0}
+.section h2{margin:0 0 0.25rem 0;font-size:1.5rem}
+.section-intro{color:var(--muted);margin-bottom:1rem}
+
+/* services grid */
+.services-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:1rem;
+  margin-top:1rem;
+}
+.card{
+  background:var(--glass);
+  padding:1rem;
+  border-radius:var(--radius);
+  border:1px solid rgba(255,255,255,0.03);
+}
+.card h3{margin-top:0}
+
+/* partners */
+.partners .partner-list{
+  list-style:none;
+  margin:1rem 0 0 0;
+  padding:0;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:0.75rem;
+}
+.partner{
+  display:flex;
+  gap:0.75rem;
+  align-items:center;
+  background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  padding:0.75rem;
+  border-radius:10px;
+  border:1px solid rgba(255,255,255,0.02);
+}
+.logo{
+  width:56px;height:56px;border-radius:8px;
+  background:linear-gradient(135deg,var(--accent),#7dd3fc);
+  display:flex;align-items:center;justify-content:center;
+  color:#021029;font-weight:700;
+  font-size:1.05rem;
+  flex:0 0 56px;
+}
+.partner-name{font-weight:600}
+.partner-desc{color:var(--muted);font-size:0.9rem}
+
+/* contact form */
+.contact-form{max-width:760px}
+.form-row{display:flex;flex-direction:column;margin-bottom:0.75rem}
+.form-row label{font-size:0.9rem;color:var(--muted);margin-bottom:0.25rem}
+input,textarea{
+  background:transparent;border:1px solid rgba(255,255,255,0.06);
+  color:var(--text);padding:0.6rem;border-radius:8px;
+}
+.form-actions{display:flex;gap:0.75rem;align-items:center;margin-top:0.5rem}
+.btn{display:inline-block;padding:0.55rem 0.9rem;border-radius:8px;text-decoration:none;border:1px solid rgba(255,255,255,0.04);cursor:pointer}
+.btn-primary{background:linear-gradient(90deg,var(--accent),#0891b2);color:#041024;border:none;font-weight:600}
+.btn-outline{background:transparent;color:var(--text);border:1px solid rgba(255,255,255,0.06)}
+
+/* footer */
+.site-footer{border-top:1px solid rgba(255,255,255,0.03);padding:1rem 0;margin-top:2rem}
+.footer-inner{display:flex;justify-content:space-between;align-items:center;gap:1rem;font-size:0.95rem;color:var(--muted)}
+
+/* small */
+.small-note{color:var(--muted);font-size:0.9rem;margin-top:0.75rem}
+
+/* responsive */
+@media (max-width:880px){
+  .hero-grid{grid-template-columns:1fr; text-align:left}
+  .header-inner{align-items:center}
+  .nav{display:none}
+  .nav.open, .nav.nav-open{display:flex;flex-direction:column;position:absolute;right:1rem;top:64px;background:var(--surface);padding:0.75rem;border-radius:8px}
+  .nav-toggle{display:block}
+}
+@media (max-width:520px){
+  .container{padding:0 0.75rem}
+}
